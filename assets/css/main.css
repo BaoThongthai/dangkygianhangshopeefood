@@ -17,6 +17,14 @@
   --font-secondary: "Inter", sans-serif;
 }
 
+/* chữ cố thập phân chữ tệp */
+#recordCount sup {
+  color: red;
+  font-size: smaller;
+  position: relative;
+  top: -0.5em; /* Điều chỉnh vị trí theo ý muốn */
+}
+
 /* Colors */
 :root {
   --color-default: #212529;
