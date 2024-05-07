@@ -18,13 +18,11 @@
 }
 
 /* chữ cố thập phân chữ tệp */
-#recordCount sup {
+#recordCount {
   color: red;
-  font-size: smaller;
-  position: relative;
-  top: -0.5em; /* Điều chỉnh vị trí theo ý muốn */
+  font-size: 1.2em; /* Thay đổi kích thước theo nhu cầu */
+  font-weight: bold; /* Nếu bạn muốn nổi bật hơn */
 }
-
 /* Colors */
 :root {
   --color-default: #212529;
@@ -1764,3 +1762,13 @@ color: rgb(0, 255, 42); /* Màu của biểu tượng */
 50% { transform: rotate(10deg); }
 100% { transform: rotate(-10deg); }
 }
+
+
+#recordCount {
+  color: red;
+  margin-left: 2px;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  font-weight: bold; /* Làm đậm số */
+}
+

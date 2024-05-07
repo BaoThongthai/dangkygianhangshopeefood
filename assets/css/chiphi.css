@@ -1,0 +1,76 @@
+/* Thiết lập cho màn hình nhỏ hơn hoặc bằng 414px (điện thoại di động) */
+@media screen and (max-width: 414px) {
+  .card {
+    max-width: 100%; /* Chiều rộng tối đa sẽ là 100% của màn hình */
+    margin: 0; /* Không có khoảng cách từ lề trái hoặc lề phải */
+  }
+  
+  .col-md-6 {
+    width: 100%; /* Chiều rộng của cột sẽ là 100% để hiển thị một cách linh hoạt */
+  }
+
+  .col-md-6 img {
+    width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của cột */
+  }
+
+  .card-text strong {
+    font-size: 5px; /* Đặt kích thước chữ cho phù hợp với màn hình của iPhone 12 */
+    display: block; /* Hiển thị chữ trong thẻ strong trên một dòng mới */
+    text-align: left; /* Căn lề trái cho chữ trong thẻ strong */
+    margin-left: 0; /* Xóa margin-left để không cần thiết */
+  }
+
+  h5 {
+    margin: 0px;
+    padding: 0px;
+    margin-left: -15px;
+    font-size: 7px;
+    display: block; /* Hiển thị chữ trong thẻ strong trên một dòng mới */
+    text-align: left; /* Căn lề trái cho chữ trong thẻ strong */
+    margin-left: 0; /* Xóa margin-left để không cần thiết */
+  }
+
+  #chitiet {
+    margin: 0px;
+    padding: 0px;
+    margin-left: -15px;
+    font-size: 5px;
+    display: block; /* Hiển thị chữ trong thẻ strong trên một dòng mới */
+    text-align: justify; /* Căn lề trái cho chữ trong thẻ strong */
+    margin-left: 0;
+  }
+
+  .responsive-img {
+    width: 100%;
+  }
+}
+
+/* Thiết lập cho màn hình lớn hơn 414px (laptop, desktop) */
+@media screen and (min-width: 415px) {
+  .card {
+    max-width: 100%; /* Chiều rộng tối đa sẽ là 100% của màn hình */
+    margin: 0; /* Không có khoảng cách từ lề trái hoặc lề phải */
+  }
+  
+  .card-text strong {
+    font-size: 18px; /* Đặt kích thước chữ cho phù hợp với màn hình của laptop và desktop */
+    display: block; /* Hiển thị chữ trong thẻ strong trên một dòng mới */
+    text-align: left; /* Căn lề trái cho chữ trong thẻ strong */
+    margin-left: 0; /* Xóa margin-left để không cần thiết */
+  }
+
+  #chitiet {
+    margin: 0px;
+    padding: 0px;
+    margin-left: -15px;
+    font-size: 15px;
+    display: block; /* Hiển thị chữ trong thẻ strong trên một dòng mới */
+    text-align: justify; /* Căn lề trái cho chữ trong thẻ strong */
+    margin-left: 0;
+  }
+
+  .card-title {
+    margin-top: 40px;
+    font-family: arial;
+  }
+}
