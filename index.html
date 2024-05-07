@@ -134,6 +134,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/chiphi.css" rel="stylesheet">
 
 </head>
 
@@ -153,10 +154,11 @@
         <ul>
           <li><a href="#hero">Trang chủ</a></li>
           <li><a href="#book-a-table">Đăng ký</a></li>
-          <li><a href="#why-us">Thông tin</a></li>
+          <li><a href="#why-us">Các Bước Thực hiện</a></li>
           <li><a href="#cauhoithuongap">Câu hỏi thường gặp</a></li>
-          <li><a href="#testimonials">Khách hàng</a></li>
-          <li><a id="fileLink" href="mockdata.html"> Tệp<span id="recordCount"><sup>(1)</sup></span> </a></li>
+          <li><a href="#testimonials">Đối Tác</a></li>
+          <li><a id="fileLink" href="mockdata.html"> Tệp (<span id="recordCount"></span>)</a></li>
+
           <!-- <li><a href="#gallery">Đối tác</a></li> -->
           <li class="dropdown">
             <a href="#contact">
@@ -183,7 +185,7 @@
           <!-- <li><a href="mockdata.html">Check data</a></li> -->
         </ul>
       </nav><!-- .navbar -->
-      <a class="btn-book-a-table" href="#book-a-table" onclick="dialPhoneNumber('0773183787')">Đăng Ký</a>
+      <!-- <a class="btn-book-a-table" href="#book-a-table" onclick="dialPhoneNumber('0773183787')">Đăng Ký</a> -->
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
@@ -333,6 +335,8 @@
       </div>
     </section>
 
+
+
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us section-bg">
       <div class="container" data-aos="fade-up">
@@ -398,13 +402,63 @@
 
       </div>
     </section><!-- End Why Us Section -->
+
+
+    <section id="why-us" class="why-us section-bg">
+      <div id="container-fluid" data-aos="fade-up" class="text-center">
+        <div class="card" style="max-width: 1800px; margin: 0 auto;"> <!-- Điều chỉnh chiều rộng và căn giữa card -->
+          <div class="row no-gutters">
+            <div class="col-md-6 col-12"> <!-- Sử dụng class "col-12" để cột này chiếm 100% chiều rộng trên mọi thiết bị -->
+              <img src="assets/img/chiphibandau.png" class="card-img" alt="...">
+            </div>
+            <div class="col-md-6 col-12"> <!-- Sử dụng class "col-12" để cột này chiếm 100% chiều rộng trên mọi thiết bị -->
+              <div class="card-body">
+                <h5 class="card-title">Gói Tăng Trưởng Doanh Thu Cho Quán Mới</h5>
+                <p class="card-text" style="margin: 0;padding: 0;">
+                  <strong style="color:rgb(230, 0, 0);">1/ Gói tăng trưởng doanh thu cho Quán mới ShopeeFood là ?</strong> 
+                  <p id = "chitiet">Gói tăng trưởng doanh thu cho Quán mới ShopeeFood là chương trình ưu đãi dành cho quán mới tham gia trên ShopeeFood, giúp tăng cơ hội 
+                    bán hàng cho Quán thông qua việc hỗ trợ mã giảm giá và tăng độ hiển thị trong những tuần đầu lên ShopeeFood.</p><!-- Thêm margin-left để dịch văn bản sang trái -->
+                
+                </p>
+                <p class="card-text" style="margin: 0;padding: 0;">
+                  <strong style="color:rgb(230, 0, 0);">2/ Quyền lợi và chi phí tham gia Gói tăng trưởng doanh thu cho Quán mới </strong> 
+                  <p id = "chitiet"> -  Chương trình có chi phí cố định là : 1,200,000đ <br>
+                  - Thời gian chạy Gói tăng trưởng doanh thu: 1 tuần (bắt đầu từ thứ 3 và kết thúc vào thứ 2 tuần kế tiếp)</p><!-- Thêm margin-left để dịch văn bản sang trái -->
+                
+                </p>
+                <p class="card-text" style="margin: 0;padding: 0;">
+                  <strong style="color:rgb(230, 0, 0);">3/Quyền lợi chung về truyền thông </strong> 
+                  <p id = "chitiet">  Tham khảo bảng bên dưới
+                </p>
+                <img src="assets/img/quyenloai.jpeg" data-aos="fade-up" alt="" class="responsive-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+     
+      </div>
+    </section>
+
+
+    
+    
+    
+    
+    
+
+
+
+
+
     <!-- =======câu hỏi thường gặp======= -->
-    <div class="container mt-3" id="cauhoithuongap" style="text-align: center; max-width: 100%;">
-      <h2 class="mb-4" style="font-size: 30px; color: orangered;">CÂU HỎI THƯỜNG GẶP</h2>
+    
+    <div class="container mt-3" data-aos="fade-up" id="cauhoithuongap" style="text-align: justify; max-width: 100%;">
+      <h2 class="mb-4" style="font-size: 30px; color: orangered;text-align: center">CÂU HỎI THƯỜNG GẶP</h2>
 
       <div class="row">
         <!-- câu hỏi 1 -->
-        <div class="col-12">
+        <div class="col-12" data-aos="fade-up">
           <div id="accordion1">
             <div class="card mb-3">
               <div class="card-header" id="headingOne">
@@ -413,7 +467,7 @@
                     aria-controls="collapseOne">
                     <div class="collapsed-question">
                       <i class="fas fa-chevron-down"></i>
-                      <span style="font-size: 20px; margin-left: 15px;">
+                      <span id ="accordion1_head"   style="font-size: 20px; margin-left: 15px;">
                         Gói Tăng trưởng doanh thu cho
                         Quán mới của ShopeeFood là chương trình gì?
                       </span>
@@ -435,7 +489,7 @@
           </div>
         </div>
         <!-- câu hỏi 2 -->
-        <div class="col-12">
+        <div class="col-12" data-aos="fade-up">
           <div id="accordion2">
             <div class="card mb-3">
               <div class="card-header" id="heading2">
@@ -464,7 +518,7 @@
         </div>
 
         <!-- câu hỏi 3 -->
-        <div class="col-12">
+        <div class="col-12" data-aos="fade-up">
           <div id="accordion3">
             <div class="card mb-3">
               <div class="card-header" id="heading3">
