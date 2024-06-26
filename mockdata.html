@@ -13,7 +13,7 @@
         }
         /* Định dạng khi checkbox được chọn */
         .checkbox-mark input[type="checkbox"]:checked {
-            background-color: red !important; /* Màu nền đỏ cho checkbox */
+            background-color: rgb(255, 94, 94) !important; /* Màu nền đỏ cho checkbox */
         }
         /* Định dạng cho ô checkbox */
         .checkbox-mark {
@@ -30,7 +30,7 @@
     
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
         <h1 class="mb-4" style="color: orange; text-align: center;">Danh sách thông tin khách hàng đăng ký</h1>
         <div class="table-responsive">
             <table class="table table-bordered">
@@ -50,6 +50,7 @@
                         <th>Nhận dạng quán</th>
                         <th>SĐT</th>
                         <th>Địa chỉ</th>
+                        <th>Hành động</th> <!-- Thêm cột cho nút xóa -->
                     </tr>
                 </thead>
                 <tbody id="customer-info-body">
@@ -98,6 +99,7 @@
                         <td>${customer.nhandienquan}</td>
                         <td>${customer.phone}</td>
                         <td>${customer.diachi}</td>
+                        <td><button class="btn btn-danger btn-delete" data-id="${customer.id}">Xóa</button></td>
                     `;
                     tableBody.appendChild(row);
 
@@ -107,6 +109,15 @@
                         var checked = this.checked ? 1 : 0; // Trạng thái mới của checkbox
                         var customerId = this.getAttribute('data-id'); // ID của khách hàng
                         updateCustomerStatus(customerId, checked); // Gửi yêu cầu cập nhật trạng thái của khách hàng
+                    });
+
+                    // Thêm sự kiện click cho nút xóa
+                    var deleteButton = row.querySelector('.btn-delete');
+                    deleteButton.addEventListener('click', function() {
+                        var customerId = this.getAttribute('data-id'); // ID của khách hàng
+                        if (confirm('Bạn có chắc chắn muốn xóa khách hàng này?')) {
+                            deleteCustomer(customerId); // Gọi hàm xóa khách hàng
+                        }
                     });
                 });
             })
@@ -129,6 +140,26 @@
             })
             .catch(error => {
                 console.error('Error updating customer status:', error);
+            });
+        }
+
+        // Hàm gửi yêu cầu xóa khách hàng đến API
+        function deleteCustomer(customerId) {
+            fetch(`${apiUrl}/${customerId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Customer deleted:', data);
+                // Xóa hàng khỏi bảng sau khi xóa thành công
+                var row = document.querySelector(`.btn-delete[data-id="${customerId}"]`).closest('tr');
+                row.remove();
+            })
+            .catch(error => {
+                console.error('Error deleting customer:', error);
             });
         }
     });
